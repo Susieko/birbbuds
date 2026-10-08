@@ -1,4 +1,5 @@
 import { motion } from 'motion/react'
+import Birb from './components/Birb'
 
 function App() {
   return (
@@ -54,27 +55,7 @@ function App() {
         </motion.div>
 
         {/* Birb */}
-        <motion.button
-          type="button"
-          aria-label="Say hello to the Birb"
-          className="group relative flex h-40 w-40 items-center justify-center rounded-[45%] border border-[#213a31]/10 bg-[#fffaf0] shadow-[0_24px_70px_rgba(56,88,73,0.14)]"
-          animate={{ y: [0, -7, 0] }}
-          whileHover={{ scale: 1.04, rotate: -2 }}
-          whileTap={{ scale: 0.95, rotate: 3 }}
-          transition={{
-            y: {
-              duration: 3.2,
-              repeat: Infinity,
-              ease: 'easeInOut',
-            },
-          }}
-        >
-          <span className="text-7xl transition-transform duration-300 group-hover:rotate-3">
-            🐦
-          </span>
-
-          <span className="absolute -bottom-3 h-3 w-20 rounded-[100%] bg-[#52705f]/15 blur-sm" />
-        </motion.button>
+<Birb name="Pip" />
 
         {/* Perch */}
         <div className="mt-4 h-3 w-52 rotate-[-2deg] rounded-full bg-[#795c42]" />
